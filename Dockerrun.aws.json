@@ -32,11 +32,7 @@
     },
     {
       "name": "nginx-proxy",
-<<<<<<< HEAD
       "image": "<YOUR-NGINX-IMAGE>",
-=======
-      "image": "public.ecr.aws/e0s8n6f1/nginx-node-redis-nginx:latest",
->>>>>>> 50325d075b6d4e796937a74788054c43aa979013
       "essential": true,
       "memory": 128,
       "links": ["web1", "web2"],
