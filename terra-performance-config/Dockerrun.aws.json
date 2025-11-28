@@ -12,7 +12,7 @@
     },
     {
       "name": "web1",
-      "image": "public.ecr.aws/e0s8n6f1/nginx-node-redis-web:latest",
+      "image": "<YOUR_IMAGE_URI_FROM_NGINX_NODE_REDIS_WEB>",
       "essential": false,
       "links": ["redis"],
       "memory": 256,
@@ -22,7 +22,7 @@
     },
     {
       "name": "web2",
-      "image": "public.ecr.aws/e0s8n6f1/nginx-node-redis-web:latest",
+      "image": "<YOUR_IMAGE_URI_FROM_NGINX_NODE_REDIS_WEB>",
       "essential": false,
       "links": ["redis"],
       "memory": 256,
@@ -32,7 +32,7 @@
     },
     {
       "name": "nginx-proxy",
-      "image": "public.ecr.aws/e0s8n6f1/nginx-node-redis-nginx:latest",
+      "image": "<YOUR_IMAGE_URI_FROM_NGINX_NODE_REDIS_NGINX>",
       "essential": true,
       "memory": 128,
       "links": ["web1", "web2"],
