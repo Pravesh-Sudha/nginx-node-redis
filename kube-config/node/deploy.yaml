@@ -16,6 +16,19 @@ spec:
     spec:
       containers:
       - name: node
-        image: pravesh2003/nginx-node-redis:latest
+        image: pravesh2003/nginx-node-redis:v2
         ports:
         - containerPort: 5000
+        livenessProbe:
+            httpGet:
+              path: /health
+              port: 5000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+          initialDelaySeconds: 5
+          periodSeconds: 5
